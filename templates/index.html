@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .con {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .con h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .con p {
+      margin: 0;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .con input {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .con button {
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .con button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/add" method="POST">
+    <div class="con">
+      <h1>Library</h1>
+      <p>Enter Book Name</p>
+      <input type="text" id="book-name" name="bookname" required>
+      <p>Enter count</p>
+      <input type="number" id="book-count" name="count" required>
+      <p>Enter author name</p>
+      <input type="text" ,id="book-author" name="author" required>
+      <button type="submit"> Submit</button>
+      <button onclick="gotobooks()">Go to Books</button>
+    </div>
+  </form>
+
+</body>
+
+<script>
+  function gotobooks(){
+    window.location.href="/details"
+  }
+</script>
+
+</html>

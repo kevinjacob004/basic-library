@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Book List</title>
+  <style>
+    table {
+      width: 80%;
+      margin: auto;
+      border-collapse: collapse;
+      background: #fff;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background: #007bff;
+      color: #fff;
+    }
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <h2>All Books</h2>
+  {% for book in books %}
+  <div style="display: flex; flex-direction: row; gap: 20px;">
+    <p>{{ book.bookname }}</p>
+        <p>{{ book.count }}</p>
+        <p>{{ book.author }}</p>
+    <table>
+      <tr>
+        <td>{{book.bookname}}</td>
+        <td>{{book.count}}</td>
+        <td>{{book.author}}</td>
+      </tr>
+    </table>
+  </div>
+
+  {% endfor %} -->
+
+  <h2 style="text-align:center;">Library Book List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Book Name</th>
+        <th>Count</th>
+        <th>Author</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for book in books %}
+      <tr>
+        <td>{{ book.bookname }}</td>
+        <td>{{ book.count }}</td>
+        <td>{{ book.author }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+
+</html>
