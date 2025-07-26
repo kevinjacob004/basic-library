@@ -20,12 +20,20 @@ def add_book():
     data={"bookname":bookname,"count":count,"author":author}
 
     col.insert_one(data)
-    return "Book added successfully. <a href='/details'>View all books</a>"
+    return render_template("index.html",message="Success!!!")
+
+@app.route("/index")
+def gotoRegister():
+    return render_template("index.html")
+
 
 @app.route("/details")
 def showbooks():
     books=list(col.find())
     return render_template("details.html",books=books)
+# @app.route("/deleterow")
+# def deletebook():
+    
 
 if __name__ == "__main__":
     print(123)

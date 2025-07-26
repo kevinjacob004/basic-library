@@ -13,7 +13,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #121212;
+      /* background-color: #121212; */
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       justify-content: center;
@@ -71,6 +71,7 @@
 </head>
 
 <body>
+  <div class="con">
   <form action="/add" method="POST">
     <div class="con">
       <h1>Library</h1>
@@ -80,10 +81,19 @@
       <input type="number" id="book-count" name="count" required>
       <p>Enter author name</p>
       <input type="text" ,id="book-author" name="author" required>
-      <button type="submit"> Submit</button>
-      <button onclick="gotobooks()">Go to Books</button>
+      <button type="submit" > Submit</button>
+      <!-- <button onclick="gotobooks()">Go to Books</button> -->
     </div>
   </form>
+     <div>
+      <button onclick="gotobooks()">Go to Books</button>
+    </div>
+  
+
+  {% if message %}
+    <div class="message"> {{message}}</div>
+  {% endif %}
+</div>
 
 </body>
 
